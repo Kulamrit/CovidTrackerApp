@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'covidtrackerapp';
+  
+  orders: any[] = [
+    { id: '1', name: 'Afghanistan' },
+    { id: '2', name: 'Alaska' },
+    { id: '3', name: 'Austria' },
+    { id: '4', name: 'Australia' }
+  ];
 }
+
