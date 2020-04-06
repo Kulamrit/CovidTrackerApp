@@ -1,0 +1,16 @@
+select {
+    text-align-last: center;
+    text-align: center;
+
+        position: fixed;
+        right: 560px;
+        padding: 10px;
+ }
+
+ input {
+    padding: 10px;
+    width: 105px;
+    right: 630px;
+    position: fixed;
+}
+ 

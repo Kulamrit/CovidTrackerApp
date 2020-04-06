@@ -5,17 +5,25 @@
   </h1>
   <img width="300" alt="Corona Logo" src="https://image.shutterstock.com/image-vector/coronavirus-disease-covid19-infection-medical-260nw-1660430236.jpg">
 </div>
+
+
 <h2 style="text-align:center">Select Country </h2>
 
-<select style="text-align:center" formControlName="orders" id="orders">
-  <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">
-    {{orders[i].name}}
+<select  style="text-align:center"  (change)="selectChangeHandler($event)">
+  <option>Select</option>
+  <option  *ngFor="let user of users; " >
+    {{user.country}}
   </option>
 </select>
 
-<br><br>
-<button style="text-align:center">submit</button>
-</form>
+<br><br><br>
+
+<div  style="text-align:center ">  
+  <input type="submit" (click)="nextPage()"/>  
+</div>
+
+<router-outlet></router-outlet>
+
 
 
 
