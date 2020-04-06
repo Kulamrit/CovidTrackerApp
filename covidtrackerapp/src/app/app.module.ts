@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountrydetailComponent } from './countrydetail/countrydetail.component';
+import { SelectcountryComponent } from './selectcountry/selectcountry.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: SelectcountryComponent , pathMatch: 'full'},
   { path: 'result/:country', component: CountrydetailComponent }
 ];
 
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    CountrydetailComponent
+    CountrydetailComponent,
+    SelectcountryComponent
   ],
   imports: [
     BrowserModule,
