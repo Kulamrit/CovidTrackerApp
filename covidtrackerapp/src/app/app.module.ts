@@ -10,11 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountrydetailComponent } from './countrydetail/countrydetail.component';
 import { SelectcountryComponent } from './selectcountry/selectcountry.component';
 
-const appRoutes: Routes = [
-  { path: '', component: SelectcountryComponent , pathMatch: 'full'},
-  { path: 'result/:country', component: CountrydetailComponent }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +21,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

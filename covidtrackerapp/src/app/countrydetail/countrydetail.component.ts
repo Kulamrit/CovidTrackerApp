@@ -23,17 +23,21 @@ export class CountrydetailComponent implements OnInit {
   ngOnInit() {
     this.fetchPost();
   }
-
+  img;
+  img2;
   route_var = this.route.snapshot.params['country'];
 
-  fetchPost() {
+  fetchPost() {debugger
     this.http
       .get('https://corona.lmao.ninja/countries/' + this.route_var)
 
-      .subscribe(responseData => {
+      .subscribe(responseData => {debugger
         this.country = Object.values(responseData)[0];
         this.Active_cases = Object.values(responseData)[7];
         this.Recovered_Cases = Object.values(responseData)[6];
+        this.img = Object.values(responseData)[1];
+        this.img2 = Object.values(this.img)[5];
+        
       });
   }
 }
