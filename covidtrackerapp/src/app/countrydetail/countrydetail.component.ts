@@ -10,9 +10,9 @@ import { map } from 'rxjs/operators';
 })
 export class CountrydetailComponent implements OnInit {
   
-  country_name ;
-  infected_people_no;
-  no_recovered;
+  country ;
+  Active_cases;
+  Recovered_Cases;
   
     constructor(
       private route: ActivatedRoute,
@@ -31,9 +31,9 @@ export class CountrydetailComponent implements OnInit {
       .get('https://corona.lmao.ninja/countries/' + this.route_var)
 
       .subscribe(responseData => {
-        this.country_name = Object.values(responseData)[0];
-        this.infected_people_no = Object.values(responseData)[7];
-        this.no_recovered = Object.values(responseData)[6];
+        this.country = Object.values(responseData)[0];
+        this.Active_cases = Object.values(responseData)[7];
+        this.Recovered_Cases = Object.values(responseData)[6];
       });
   }
 }
