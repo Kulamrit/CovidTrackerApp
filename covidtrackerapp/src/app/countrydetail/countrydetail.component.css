@@ -22,7 +22,8 @@ th {
 .center {
  
   border-collapse: collapse;
-  
+  border: 2px solid rgb(71, 101, 201);
+  border-radius: 8px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -53,9 +54,9 @@ h2 {
   
 }
 .div1 {
-  
+  background-color: rgb(105, 101, 99);
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 220px;
   margin-right: 350px;
   margin-left: 380px;
   border: 1px solid #4CAF50;

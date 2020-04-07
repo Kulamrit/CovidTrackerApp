@@ -1,11 +1,12 @@
 <app-header></app-header>
+<div class="well" [ngStyle]="{'background-image': 'url(' + img3 + ')'}"> 
 <img class="center" src="{{img2}}" alt="flag" height="100px" width="10px">
 <br>
 <div class="div2" style="text-align:center ">  
   <h4 style="color:white;"><a href="#" class="dropdown-toggle" role="button" (click)="gotoHome()">Search For Another Country</a></h4> 
 </div>
 <h2 style="color:white;" style="text-align:center">Covid19 Tracker</h2>
-<div class="div1" [ngStyle]="{'background-image': 'url(' + img2 + ')'}">
+<div class="div1" >
    <h3 style="text-align:center">{{country}}'s Corona Status</h3>
 <table  class="center2" style="width: 250px; " >
   <tr>
@@ -43,4 +44,5 @@
     <td>{{ Critical_Cases }}</td>
   </tr>
 </table>
+</div>
 </div>

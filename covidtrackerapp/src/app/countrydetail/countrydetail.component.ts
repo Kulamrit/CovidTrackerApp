@@ -31,6 +31,9 @@ export class CountrydetailComponent implements OnInit {
   Today_Deaths;
   Critical_Cases;
   route_var = this.route.snapshot.params['country'];
+  url3 = ('https://www.mapsofworld.com/'+ this.route_var);
+  url4: string = this.url3.toLowerCase( );
+  img3="https://images.unsplash.com/photo-1586009123393-0121baae8057?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
   gotoHome(){
     this.router.navigate(['']);
   }
