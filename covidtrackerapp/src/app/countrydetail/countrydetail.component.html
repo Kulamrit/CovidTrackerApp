@@ -1,19 +1,46 @@
 <app-header></app-header>
 <img class="center" src="{{img2}}" alt="flag" height="100px" width="10px">
-<div >
-  <br> <h3 style="text-align:center">Corona Status</h3><br>
-<table  class="center2" style="width: 170px; " >
+<br>
+<div class="div2" style="text-align:center ">  
+  <h4 style="color:white;"><a href="#" class="dropdown-toggle" role="button" (click)="gotoHome()">Search For Another Country</a></h4> 
+</div>
+<h2 style="color:white;" style="text-align:center">Covid19 Tracker</h2>
+<div class="div1" [ngStyle]="{'background-image': 'url(' + img2 + ')'}">
+   <h3 style="text-align:center">{{country}}'s Corona Status</h3>
+<table  class="center2" style="width: 250px; " >
   <tr>
     <th>Country</th>
     <td>{{ country }}</td>
   </tr>
   <tr>
-    <th>Active Cases</th>
-    <td>{{ Active_cases }}</td>
+    <th  >Total Cases</th>
+    <td>{{ Total_Cases }}</td>
+  </tr>
+  <tr>
+    <th>Today Cases</th>
+    <td>{{ Today_Cases }}</td>
+  </tr>
+  <tr>
+    <th>Total Deaths</th>
+    <td>{{ Total_Deaths }}</td>
+  </tr>
+  <tr>
+    <th>Today Deaths</th>
+    <td>{{ Today_Deaths }}</td>
   </tr>
   <tr>
     <th>Recoverd Cases
     </th>
     <td>{{ Recovered_Cases }}</td>
   </tr>
+  <tr>
+    <th>Active Cases</th>
+    <td>{{ Active_cases }}</td>
+  </tr>
+  <tr>
+    <th>Critical Cases
+    </th>
+    <td>{{ Critical_Cases }}</td>
+  </tr>
 </table>
+</div>

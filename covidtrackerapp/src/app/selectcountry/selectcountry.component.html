@@ -1,12 +1,12 @@
 <app-header></app-header>
-<div style="text-align:center">
-  <h1>
+<div style="text-align:center" >
+  <h1 style="color:white;">
     Welcome to Corona Tracker !
   </h1>
   <img width="300" alt="Corona Logo" src="https://image.shutterstock.com/image-vector/coronavirus-disease-covid19-infection-medical-260nw-1660430236.jpg">
 </div>
 
-<h2 style="text-align:center">Select Country </h2>
+<h2 style="color:white;" style="text-align:center">Select Country </h2>
 <select class="center" style="text-align:center"  (change)="selectChangeHandler($event)">
   <option>Select</option>
   <option  *ngFor="let user of users; " >
