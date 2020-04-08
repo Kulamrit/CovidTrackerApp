@@ -9,6 +9,13 @@ import { HeaderComponent } from './header/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountrydetailComponent } from './countrydetail/countrydetail.component';
 import { SelectcountryComponent } from './selectcountry/selectcountry.component';
+import {  HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -21,7 +28,14 @@ import { SelectcountryComponent } from './selectcountry/selectcountry.component'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
 
   ],
   providers: [],

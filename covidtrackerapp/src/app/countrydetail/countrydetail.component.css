@@ -50,11 +50,16 @@ h3 {
 
 h2 {
   
-    background-color: white;
+    background-color: rgb(215, 215, 243);
+    margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 350px;
+  margin-left: 380px;
   
 }
 .div1 {
-  background-color: rgb(105, 101, 99);
+ 
+  background-image: linear-gradient( white,rgb(141, 141, 224));
   margin-top: 10px;
   margin-bottom: 220px;
   margin-right: 350px;
