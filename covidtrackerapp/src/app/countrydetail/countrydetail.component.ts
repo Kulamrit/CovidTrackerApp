@@ -34,8 +34,9 @@ export class CountrydetailComponent implements OnInit {
   url3 = ('https://www.mapsofworld.com/'+ this.route_var);
   url4: string = this.url3.toLowerCase( );
   img3="https://images.unsplash.com/photo-1586009123393-0121baae8057?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60";
+ 
   gotoHome(){
-    this.router.navigate(['']);
+    this.router.navigate(['covidtracker']);
   }
 
   fetchPost() {debugger
@@ -43,7 +44,7 @@ export class CountrydetailComponent implements OnInit {
       .get('https://corona.lmao.ninja/countries/' + this.route_var)
 
       .subscribe(responseData => {debugger
-        this.country = Object.values(responseData)[0];
+        this.country = Object.values(responseData)[1];
         this.Total_Cases = Object.values(responseData)[3];
         this.Today_Cases = Object.values(responseData)[4];
         this.Total_Deaths = Object.values(responseData)[5];
@@ -52,7 +53,7 @@ export class CountrydetailComponent implements OnInit {
         this.Active_cases = Object.values(responseData)[8];
         this.Critical_Cases = Object.values(responseData)[9];
        
-        this.img = Object.values(responseData)[1];
+        this.img = Object.values(responseData)[2];
         this.img2 = Object.values(this.img)[5];
         
       });

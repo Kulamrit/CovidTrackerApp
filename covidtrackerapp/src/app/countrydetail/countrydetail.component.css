@@ -57,6 +57,11 @@ h2 {
   margin-left: 380px;
   
 }
+
+.well{
+
+  background-image: radial-gradient(rgb(90, 17, 17) 5%, rgb(214, 68, 10) 5%,Black 55%);
+}
 .div1 {
  
   background-image: linear-gradient( white,rgb(141, 141, 224));

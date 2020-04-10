@@ -12,6 +12,7 @@ import { SelectcountryComponent } from './selectcountry/selectcountry.component'
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CardviewComponent } from './cardview/cardview.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -22,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HeaderComponent,
     CountrydetailComponent,
-    SelectcountryComponent
+    SelectcountryComponent,
+    CardviewComponent
   ],
   imports: [
     BrowserModule,
